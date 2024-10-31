@@ -8,9 +8,10 @@
 import { inject, onMounted } from "vue";
 
 const emitter = inject("emitter");
+
 onMounted(() => {
-  emitter.on("globalEvent", (e) => {
-    console.log("Data is ", e);
+  emitter.on("callPolice", () => {
+    console.log("Gotcha.. police is on the way!");
   });
 });
 </script>
